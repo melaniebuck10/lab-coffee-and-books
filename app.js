@@ -7,7 +7,7 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
 const indexRouter = require('./routes/index');
-const placeRouter = require('./routes/place');
+const placeRouter = require('./routes/places');
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter);
-app.use('/place', placeRouter)
+app.use('/places', placeRouter)
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {

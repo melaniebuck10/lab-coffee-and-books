@@ -1,0 +1,8 @@
+<h2>Show details of place</h2>
+
+<div> {{#with place}}
+    <h3>{{name}}</h3>
+    <h4>{{type}}</h4>
+    <a href="/places/{{ _id}}/edit">Update</a>
+    {{/with}}
+</div>

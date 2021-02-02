@@ -1,12 +1,8 @@
 <h2>Find below all places</h2>
 
 {{#each places}}
-<a href="/places/{{_id}}">
-<h2>{{ name }}</h2></a> 
-<p>{{ type }}</p>
-
-<br><br>
-<form action="/places/{{_id}}/delete" method="POST"> 
+<a href="/places/{{_id}}">{{ name }} </a> <br><br>
+<form action="places/{{_id}}/delete" method="POST"> 
 <button>Delete</button></form>
  <form action="places/{{_id}}/edit" method="GET">
     <button>Edit</button>
@@ -15,4 +11,4 @@
 
 
 <br><br><br>
-<a href="/celebrities/create">Add new Place</a>
+<a href="/celebrities/create">Add new Celebrity</a>
